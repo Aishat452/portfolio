@@ -1324,14 +1324,12 @@ return Item;
 
 /*!
  * Outlayer v2.1.0
- * the brains and guts of a layout library
- * MIT license
  */
 
 ( function( window, factory ) {
   'use strict';
   // universal module definition
-  /* jshint strict: false */ /* globals define, module, require */
+  /* jshint strict: false */ /* globals define, module, required */
   if ( typeof define == 'function' && define.amd ) {
     // AMD - RequireJS
     define( 'outlayer/outlayer',[
@@ -1354,7 +1352,7 @@ return Item;
       require('./item')
     );
   } else {
-    // browser global
+    // global browser
     window.Outlayer = factory(
       window,
       window.EvEmitter,
@@ -1367,13 +1365,13 @@ return Item;
 }( window, function factory( window, EvEmitter, getSize, utils, Item ) {
 'use strict';
 
-// ----- vars ----- //
+// ----- variables ----- //
 
 var console = window.console;
 var jQuery = window.jQuery;
 var noop = function() {};
 
-// -------------------------- Outlayer -------------------------- //
+// --- Outlayer --- //
 
 // globally unique identifiers
 var GUID = 0;

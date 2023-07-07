@@ -2733,7 +2733,7 @@
 		 * @protected
 		 * @type {Array.<String>}
 		 */
-		this._templates = [];
+		this._portfolios = [];
 
 		/**
 		 * The carousel element.
@@ -2760,18 +2760,18 @@
 		this._handlers = {
 			'prepared.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && this._core.settings.dotsData) {
-					this._templates.push('<div class="' + this._core.settings.dotClass + '">' +
+					this._portfolios.push('<div class="' + this._core.settings.dotClass + '">' +
 						$(e.content).find('[data-dot]').addBack('[data-dot]').attr('data-dot') + '</div>');
 				}
 			}, this),
 			'added.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && this._core.settings.dotsData) {
-					this._templates.splice(e.position, 0, this._templates.pop());
+					this._portfolios.splice(e.position, 0, this._portfolios.pop());
 				}
 			}, this),
 			'remove.owl.carousel': $.proxy(function(e) {
 				if (e.namespace && this._core.settings.dotsData) {
-					this._templates.splice(e.position, 1);
+					this._portfolios.splice(e.position, 1);
 				}
 			}, this),
 			'changed.owl.carousel': $.proxy(function(e) {
@@ -2858,7 +2858,7 @@
 
 		// create DOM structure for absolute navigation
 		if (!settings.dotsData) {
-			this._templates = [ $('<div>')
+			this._portfolios = [ $('<div>')
 				.addClass(settings.dotClass)
 				.append($('<span>'))
 				.prop('outerHTML') ];
@@ -2964,9 +2964,9 @@
 			difference = this._pages.length - this._controls.$absolute.children().length;
 
 			if (settings.dotsData && difference !== 0) {
-				this._controls.$absolute.html(this._templates.join(''));
+				this._controls.$absolute.html(this._portfolios.join(''));
 			} else if (difference > 0) {
-				this._controls.$absolute.append(new Array(difference + 1).join(this._templates[0]));
+				this._controls.$absolute.append(new Array(difference + 1).join(this._portfolios[0]));
 			} else if (difference < 0) {
 				this._controls.$absolute.children().slice(difference).remove();
 			}

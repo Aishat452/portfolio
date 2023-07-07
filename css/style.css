@@ -351,7 +351,7 @@ summary {
   cursor: pointer;
 }
 
-template {
+portfolio {
   display: none;
 }
 
@@ -9712,7 +9712,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-/********** Template CSS ************/
+/********** Portfolio CSS ************/
 h1,
 .font-weight-bolder {
   font-weight: 900 !important;
