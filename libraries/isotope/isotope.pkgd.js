@@ -1,9 +1,6 @@
 /*!
  * Isotope PACKAGED v3.0.5
  *
- * Licensed GPLv3 for open source use
- * or Isotope Commercial License for commercial use
- *
  * https://isotope.metafizzy.co
  * Copyright 2017 Metafizzy
  */
@@ -41,11 +38,11 @@
 }( window, function factory( window, jQuery ) {
 'use strict';
 
-// ----- utils ----- //
+// ----- utilities ----- //
 
 var arraySlice = Array.prototype.slice;
 
-// helper function for logging errors
+// logging errors handler
 // $.error breaks jQuery chaining
 var console = window.console;
 var logError = typeof console == 'undefined' ? function() {} :
@@ -1219,7 +1216,6 @@ proto.removeElem = function() {
 };
 
 proto.remove = function() {
-  // just remove element if no transition support or no transition
   if ( !transitionProperty || !parseFloat( this.layout.options.transitionDuration ) ) {
     this.removeElem();
     return;

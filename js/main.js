@@ -11,7 +11,7 @@
     });
 
 
-    // Smooth scrolling on the navbar links
+    // Smooth scrolling nav links
     $(".navbar-nav a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
