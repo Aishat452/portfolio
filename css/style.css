@@ -315,6 +315,11 @@ legend {
   legend {
     font-size: calc(1.275rem + 0.3vw) ;
   }
+
+  .content-creation,
+  .languages-text{
+    text-align: center !important;
+  }
 }
 
 progress {
