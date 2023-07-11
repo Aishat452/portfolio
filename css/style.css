@@ -111,6 +111,10 @@ ul ol {
   margin-bottom: 0;
 }
 
+.portimg{
+  height: 150px !important;
+}
+
 dt {
   font-weight: 700;
 }
