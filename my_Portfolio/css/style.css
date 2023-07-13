@@ -9756,12 +9756,13 @@ h6,
 }
 
 .btn-social {
-  width: 45px;
-  height: 45px;
+  font-size: 1.8rem;
+  width: 65px;
+  height: 65px;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
-  border-radius: 45px;
+  border-radius: 50px;
 }
 
 .form-control {
